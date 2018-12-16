@@ -8,8 +8,12 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class Page1 {
 
-  constructor(public navCtrl: NavController) {
+  	constructor(public navCtrl: NavController) {
 
-  }
+  	}
 
+
+   	blaat(){
+		console.log('blaat');
+	}
 }

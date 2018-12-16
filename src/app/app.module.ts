@@ -4,6 +4,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+// v5.0.3
+import { HttpClientModule} from '@angular/common/http';
+
+import {EventService} from './event.service';
+
+
+
 import { MyApp } from './app.component';
 
 @NgModule({
@@ -12,7 +19,8 @@ import { MyApp } from './app.component';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -21,6 +29,7 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    EventService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
