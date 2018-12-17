@@ -9,7 +9,6 @@ export class EventService {
 
 
 	fetchEvents() : Observable<Object>{
-		console.log('hahhaha');
 		return this.http.get('https://tsh-app.firebaseio.com/events.json');
 	}
 }
