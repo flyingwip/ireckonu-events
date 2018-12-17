@@ -38,4 +38,11 @@ export class EventsPage {
     console.log(this.event$);
   }	
 
+  raiseError(){
+    
+    this.event$ = this.eventService.raiseError();
+    
+  } 
+
+
 }

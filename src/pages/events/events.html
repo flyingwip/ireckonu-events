@@ -16,6 +16,7 @@
 <ion-content padding>
 
 <button (click)="fetchEvents()" ion-button>Fetch Events</button>
+<button (click)="raiseError()" ion-button>Raise Error</button>
 
 <ul>
   <li *ngFor="let event of event$ | async" >

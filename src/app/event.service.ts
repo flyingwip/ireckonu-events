@@ -9,7 +9,10 @@ export class EventService {
 
 
 	fetchEvents() : Observable<Object>{
-		console.log('hahhaha');
 		return this.http.get('https://tsh-app.firebaseio.com/events.json');
 	}
+
+	raiseError() : Observable<Object>{
+		return this.http.get('/assets/data/unavailableendpoint.json');
+	}	
 }
