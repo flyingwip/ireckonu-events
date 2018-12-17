@@ -5,9 +5,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 // v5.0.3
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import {EventService} from './event.service';
+import {MyLogHttpInterceptor} from './http.interceptor';
 
 
 
@@ -30,6 +31,7 @@ import { MyApp } from './app.component';
     StatusBar,
     SplashScreen,
     EventService,
+    { provide: HTTP_INTERCEPTORS, useClass:MyLogHttpInterceptor, multi : true},
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
